@@ -1,2 +1,18 @@
 # CustomUser
-Learning Authentication Systems with Python-Django, A simple Django authentication system with user signup, login, logout, and profile completion workflow. Designed as a beginner-friendly project to demonstrate user management and form handling in Django.
+**Django User Authentication & Profile App**
+A simple web application built with Django that demonstrates user authentication and profile management. Users can sign up, log in, log out, and complete their profile before accessing the main features of the application.
+
+**Features**
+
+User registration (Sign Up)
+User authentication (Login & Logout)
+Profile completion after first login
+Form validation using Django forms
+Restricted access to authenticated users only
+Clean and modular Django app structure
+
+**Tech Stack**
+
+Python
+Django
+SQLite (default database)
