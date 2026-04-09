@@ -1,0 +1,248 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #0b3d2e;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1505842465776-3ac5f06c9c6c') no-repeat center/cover;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+/* BUTTONS */
+.btn {
+  background: #c59d5f;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.btn-outline {
+  border: 1px solid white;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* FEATURES */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background: #f4f4f4;
+  padding: 20px;
+  width: 250px;
+}
+
+/* TEE TIME */
+.tee-time {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.tee-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.tee-image {
+  flex: 1;
+  min-width: 250px;
+  height: 300px;
+  background: url('https://images.unsplash.com/photo-1508606572321-901ea443707f') no-repeat center/cover;
+}
+
+/* EVENTS */
+.events {
+  padding: 50px;
+  text-align: center;
+}
+
+.event-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #eee;
+  padding: 20px;
+  width: 200px;
+}
+
+/* CTA */
+.cta {
+  background: #0b3d2e;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+}
+
+/* PAGE HEADER */
+.page-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f4f4f4;
+}
+
+/* ABOUT */
+.about-content {
+  padding: 50px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-content div {
+  margin-bottom: 30px;
+}
+
+/* FORM PAGES */
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background: #f4f4f4;
+}
+
+.form-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-card input {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.form-card button {
+  margin-top: 10px;
+}
+
+.form-card p {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 📱 MOBILE STYLES */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    flex-direction: column;
+    background: #0b3d2e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: center;
+  }
+
+  .navbar nav a {
+    padding: 15px;
+    border-top: 1px solid #1f5c46;
+    margin: 0;
+  }
+
+  .navbar nav.active {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .tee-time {
+    flex-direction: column;
+  }
+}
