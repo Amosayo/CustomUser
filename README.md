@@ -4,6 +4,7 @@ A simple web application built with Django that demonstrates user authentication
 
 **Features**
 
+
 User registration (Sign Up)
 User authentication (Login & Logout)
 Profile completion after first login
