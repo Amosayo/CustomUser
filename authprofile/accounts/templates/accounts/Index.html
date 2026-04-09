@@ -1,0 +1,83 @@
+
+{% extends "testapp/base.html"%}
+
+{% block content %}
+
+<!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">⛳ GreenField Club</div>
+
+    <nav id="nav-links">
+      <a href="http://127.0.0.1:8000/aboutus">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="http://127.0.0.1:8000/login">Login</a>
+      <a href="http://127.0.0.1:8000/signup" class="btn">Sign Up</a>
+    </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+
+    <!-- HERO -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Your Golf Experience, Elevated</h1>
+      <p>Book tee times, track scores, and connect with members.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn">Join Now</a>
+        <a href="#" class="btn-outline">Member Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2>Member Benefits</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>📅 Tee Time Booking</h3>
+        <p>Reserve your spot easily.</p>
+      </div>
+      <div class="feature">
+        <h3>🏆 Tournaments</h3>
+        <p>Join competitions and events.</p>
+      </div>
+      <div class="feature">
+        <h3>📊 Score Tracking</h3>
+        <p>Monitor your performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEE TIME -->
+  <section class="tee-time">
+    <div class="tee-text">
+      <h2>Easy Tee Time Scheduling</h2>
+      <p>Plan your game with our simple booking system.</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+    <div class="tee-image"></div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="events">
+    <h2>Upcoming Events</h2>
+    <div class="event-cards">
+      <div class="card">
+        <h3>Spring Tournament</h3>
+        <p>April 25</p>
+      </div>
+      <div class="card">
+        <h3>Club Championship</h3>
+        <p>May 10</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Become a Member Today</h2>
+    <p>Join our community and enjoy exclusive benefits.</p>
+    <a href="#" class="btn">Sign Up</a>
+  </section>
+
+{% endblock content %}
