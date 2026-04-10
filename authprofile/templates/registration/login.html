@@ -1,0 +1,27 @@
+
+{% extends "website/base.html"%}
+
+{% block title %} Log In  {% endblock %}
+
+{% block content %}
+
+<!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">⛳ GreenField Club</div>
+
+    <nav id="nav-links">
+      <a href="http://127.0.0.1:8000/aboutus">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="{% url 'login' %}">Login</a>
+      <a href="http://127.0.0.1:8000/signup" class="btn">Sign Up</a>
+    </nav>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+<form method ="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Login</button>
+</form>
+
+{% endblock content %}
