@@ -1,13 +1,12 @@
 
-
 {% extends "website/base.html"%}
 
-{% block title %} Home {% endblock %}
+{% block title %} Log In  {% endblock %}
 
 {% block content %}
 
 <!-- NAVBAR -->
-  <header class="navbar">
+ <header class="navbar">
     <div class="logo">⛳ GreenField Club</div>
 
     <nav id="nav-links">
@@ -22,10 +21,15 @@
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
-
-    <div>
-        <h1> This is Products page!</h1>
-    </div>
-
+<form method ="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Login</button>
+</form>
+<div> 
+    <small>
+        Didn't Have An Account Yet? <a href ="{% url 'signup' %}"> Sign Up </a>
+    </small>
+</div>
 
 {% endblock content %}

@@ -2,7 +2,7 @@
 
 {% extends "website/base.html"%}
 
-{% block title %} Home {% endblock %}
+{% block title %} sign up {% endblock %}
 
 {% block content %}
 
@@ -23,9 +23,16 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
 
-    <div>
-        <h1> This is Products page!</h1>
-    </div>
+<form method ="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">sign up</button>
+</form>
 
+<div> 
+    <small>
+        Already Have An Account? <a href ="{% url 'login' %}"> login </a>
+    </small>
+</div>
 
 {% endblock content %}

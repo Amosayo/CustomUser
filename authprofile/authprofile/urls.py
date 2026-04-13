@@ -17,6 +17,7 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from users import views as user_views
 # from django.templatetags.static import static
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,5 +25,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("signup/", user_views.signup, name="signup"),
     path("", include("website.urls")),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
