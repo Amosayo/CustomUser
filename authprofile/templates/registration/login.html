@@ -6,14 +6,17 @@
 {% block content %}
 
 <!-- NAVBAR -->
-  <header class="navbar">
+ <header class="navbar">
     <div class="logo">⛳ GreenField Club</div>
 
     <nav id="nav-links">
-      <a href="http://127.0.0.1:8000/aboutus">About Us</a>
-      <a href="contact.html">Contact</a>
+       <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'products' %}">Products</a>
+         <a href="{% url 'learn' %}">Learning</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'contact' %}">Contact</a>
       <a href="{% url 'login' %}">Login</a>
-      <a href="http://127.0.0.1:8000/signup" class="btn">Sign Up</a>
+      <a href="{% url 'signup' %}" class="btn">Sign Up</a>
     </nav>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -23,5 +26,10 @@
     {{form}}
     <button type="submit">Login</button>
 </form>
+<div> 
+    <small>
+        Didn't Have An Account Yet? <a href ="{% url 'signup' %}"> Sign Up </a>
+    </small>
+</div>
 
 {% endblock content %}

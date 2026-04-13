@@ -1,4 +1,5 @@
 
+
 {% extends "website/base.html"%}
 
 {% block title %} sign up {% endblock %}
@@ -10,14 +11,18 @@
     <div class="logo">⛳ GreenField Club</div>
 
     <nav id="nav-links">
-      <a href="http://127.0.0.1:8000/aboutus">About Us</a>
-      <a href="contact.html">Contact</a>
+       <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'products' %}">Products</a>
+         <a href="{% url 'learn' %}">Learning</a>
+      <a href="{% url 'about' %}">About Us</a>
+      <a href="{% url 'contact' %}">Contact</a>
       <a href="{% url 'login' %}">Login</a>
       <a href="{% url 'signup' %}" class="btn">Sign Up</a>
     </nav>
 
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </header>
+
 <form method ="POST">
     {% csrf_token %}
     {{form.as_p}}
@@ -26,7 +31,7 @@
 
 <div> 
     <small>
-        Already Have An Account? <a href ="#"> login </a>
+        Already Have An Account? <a href ="{% url 'login' %}"> login </a>
     </small>
 </div>
 
